@@ -1,9 +1,16 @@
 <?php
 
-    require 'class.php';
+    // require 'class.php';
+    require 'forms.php';
     //
-    $pre = new personne();
-    $presonne = new personne("daoudi","rachid",20,"agadir");
+    // $pre = new personne("daoudi","rachid",10,"agadir");
+
+    // $presonne = new personne();
+    
+    // $presonne->setNom("Daoudi");
+    // $presonne->setPreom("Younes");
+    // $presonne->setAge(19);
+    // $presonne->setVille("Agadir");
 
     // $pre->setNom("Daoudi");
     // $pre->setPreom("Younes");
@@ -14,19 +21,29 @@
     // echo $pre->getPrenom();
     // echo $pre->getAge();
     // echo $pre->getVille();
-
-
-    $presonne->setNom("Daoudi");
-    $presonne->setPreom("Younes");
-    $presonne->setAge(12);
-    $presonne->setVille("Agadir");
-    echo $presonne->getNom();
-
+    
     // $pre->setPreom("Younes");
     // echo $pre->getNom();
 
-    // echo $pre->__toString();
+    // echo $presonne->getNom();
 
-    // echo $pre->age();
+    // echo $presonne->getNom();
+
+    // echo $presonne->__toString();
+
+    $form = new Form(array(
+        'username' => 'Daoudi'
+    ));
+    // var_dump($form);
+    // die();
+    $form->input('username');
+    $form->input('password');
+    $form->submit();
+
+
+    $form
+
+
+
 
 ?>
